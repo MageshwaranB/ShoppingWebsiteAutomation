@@ -31,6 +31,7 @@ public class ScrollingExercises
 		action=new Actions(driver);
 		wait=new WebDriverWait(driver,10);
 		ScrollingExercises scroll=new ScrollingExercises();
+		driver.findElement(By.xpath("//div[@id='root']/main/div/div/button")).click();
 		driver.findElement(By.id("onetrust-accept-btn-handler")).click();
 		boolean actualRes = scroll.withJSExecutor(driver, "//i[@class='svg svg-facebook']");
 		try {
